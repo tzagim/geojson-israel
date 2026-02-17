@@ -1,8 +1,0 @@
-{
-"type": "FeatureCollection",
-"name": "Hevel_Yavne",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-"features": [
-{ "type": "Feature", "properties": { "Muni_Heb": "חבל יבנה", "Muni_Eng": "Hevel Yavne", "Sug_Muni": "מועצה אזורית", "CR_PNIM": "5529", "CR_LAMAS": "", "Vaad_Heb": "בית רבן", "Vaad_Eng": "BEIT RABAN", "CV_PNIM": "0848", "CV_LAMAS": "848", "Machoz": "מרכז", "Nafa1": "רחובות", "Nafa2": "", "Eshkol_MPn": "אשכול רשויות שורק דרומי", "Sign_Date": "2024-04-15T00:00:00Z", "Shape_Leng": 1234.7998169800001, "Shape_Area": 91379.288519599999 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 34.730728812630936, 31.818289126999176 ], [ 34.726635092233593, 31.819208510230176 ], [ 34.726951737957656, 31.816514714906646 ], [ 34.72954050480277, 31.815964878603047 ], [ 34.730728812630936, 31.818289126999176 ] ] ] } }
-]
-}
