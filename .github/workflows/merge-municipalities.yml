@@ -1,0 +1,37 @@
+name: Merge All Municipalities GeoJSON
+
+on:
+  push:
+    paths:
+      - "geojson-israel-municipalities/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6.0.2
+
+      - name: Set up Python
+        uses: actions/setup-python@v6.2.0
+        with:
+          python-version: '3.12'
+
+      - name: Merge all GeoJSON files
+        id: merge
+        run: python .github/scripts/merge.py
+
+      - name: Create or update latest release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create latest-municipalities \
+            --title "Latest Merged Municipalities GeoJSON" \
+            --notes "Auto-generated merged file from all municipalities" \
+            --latest || true
+          gh release upload latest-municipalities all_municipalities.geojson --clobber
