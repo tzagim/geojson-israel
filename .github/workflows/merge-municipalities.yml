@@ -23,15 +23,12 @@ jobs:
           python-version: '3.12'
 
       - name: Merge all GeoJSON files
-        id: merge
         run: python .github/scripts/merge.py
 
-      - name: Create or update latest release
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh release create latest-municipalities \
-            --title "Latest Merged Municipalities GeoJSON" \
-            --notes "Auto-generated merged file from all municipalities" \
-            --latest || true
-          gh release upload latest-municipalities all_municipalities.geojson --clobber
+      - name: Auto commit and push merged file if changed
+        uses: stefanzweifel/git-auto-commit-action@v7.1.0
+        with:
+          commit_message: "chore: update merged municipalities GeoJSON [ci skip]"
+          file_pattern: all_municipalities.geojson
+          skip_fetch: true
+          skip_dirty_check: false
