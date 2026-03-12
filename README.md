@@ -15,6 +15,7 @@ The borders of settlements in the State of Israel from the Ministry of the Inter
 - כל יישוב/רשות מקומית/ועד מקומי בקובץ GeoJSON **נפרד**
 - שם התיקייה ושם הקובץ מבוססים על השם באנגלית (`Muni_Eng`)
 - הקואורדינטות הומרו מרשת ישראל החדשה (ITM / EPSG:2039) → **WGS84** (EPSG:4326)
+- הקובץ המקורי אינו מכיל את שטחי היישובים ביהודה ושומרון.
 
 ## שדות properties
 ```json
