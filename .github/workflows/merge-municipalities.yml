@@ -26,7 +26,7 @@ jobs:
         run: python .github/scripts/merge.py
 
       - name: Auto commit and push merged file if changed
-        uses: stefanzweifel/git-auto-commit-action@v7.1.0
+        uses: stefanzweifel/git-auto-commit-action@v7.2.0
         with:
           commit_message: "chore: update merged municipalities GeoJSON [ci skip]"
           file_pattern: all_municipalities.geojson
