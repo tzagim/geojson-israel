@@ -14,8 +14,10 @@ The borders of settlements in the State of Israel from the Ministry of the Inter
 ## מה יש כאן?
 - כל יישוב/רשות מקומית/ועד מקומי בקובץ GeoJSON **נפרד**
 - שם התיקייה ושם הקובץ מבוססים על השם באנגלית (`Muni_Eng`)
-- הקואורדינטות הומרו מרשת ישראל החדשה (ITM / EPSG:2039) → **WGS84** (EPSG:4326)
 - הקובץ המקורי אינו מכיל את שטחי היישובים ביהודה ושומרון.
+- הקואורדינטות הומרו מרשת ישראל החדשה
+  
+ (ITM / EPSG:2039) → WGS84 (EPSG:4326)
 
 ## שדות properties
 ```json
@@ -23,11 +25,11 @@ The borders of settlements in the State of Israel from the Ministry of the Inter
 "Muni_Eng"       // שם באנגלית
 "Sug_Muni"       // סוג הרשות (מועצה מקומית / עירייה / מועצה אזורית ...)
 "CR_PNIM"        // קוד פנימי משרד הפנים
-"CR_LAMAS"       // קוד הלמ"ס
-"Vaad_Heb"       // שם ועד מקומי (עברית)
-"Vaad_Eng"       // שם ועד מקומי (אנגלית)
-"CV_PNIM"        // קוד ועד (משרד הפנים)
-"CV_LAMAS"       // קוד ועד (למ"ס)
+"CR_LAMAS"       // קוד למ"ס
+"Vaad_Heb"       // שם ועד/ישוב/עיר מקומי (עברית)
+"Vaad_Eng"       // שם ועד/ישוב/עיר מקומי (אנגלית)
+"CV_PNIM"        // קוד ועד/ישוב/עיר (משרד הפנים)
+"CV_LAMAS"       // קוד ועד/ישוב/עיר (למ"ס)
 "Machoz"         // מחוז
 "Nafa1"          // נפה 1
 "Nafa2"          // 2 נפה
